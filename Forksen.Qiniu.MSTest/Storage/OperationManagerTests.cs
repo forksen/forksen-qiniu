@@ -1,18 +1,18 @@
-﻿using NUnit.Framework;
-using System;
+﻿using System;
 using System.Text;
 using Qiniu.Util;
 using Qiniu.Http;
 using Qiniu.Storage;
 using Qiniu.Tests;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Qiniu.Storage.Tests
 {
-    [TestFixture]
+    [TestClass]
     public class OperationManagerTests :TestEnv
     {
 
-        [Test]
+        [TestMethod]
         public void PfopTest()
         {
             string saveMp4Entry = Base64.UrlSafeBase64Encode(Bucket + ":avthumb_test_target.mp4");

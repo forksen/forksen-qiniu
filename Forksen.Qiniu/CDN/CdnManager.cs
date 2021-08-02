@@ -2,6 +2,7 @@
 using System.Text;
 using Qiniu.Util;
 using Qiniu.Http;
+using Newtonsoft.Json;
 
 namespace Qiniu.CDN
 {
@@ -174,7 +175,7 @@ namespace Qiniu.CDN
             try
             {
                 string url = bandwidthEntry();
-                string body = request.ToJsonStr();
+                string body = JsonConvert.SerializeObject(request);
                 string token = auth.CreateManageToken(url);
 
                 HttpResult hr = httpManager.PostJson(url, body, token);

@@ -1,15 +1,15 @@
-﻿using NUnit.Framework;
-using Qiniu.Util;
+﻿using Qiniu.Util;
 using Qiniu.Http;
 using System;
 using Qiniu.Tests;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Qiniu.Storage.Tests
 {
-    [TestFixture]
+    [TestClass]
     public class ResumableUploaderTests : TestEnv
     {
-        [Test]
+        [TestMethod]
         public void UploadFileTest()
         {
             Mac mac = new Mac(AccessKey, SecretKey);
@@ -44,7 +44,7 @@ namespace Qiniu.Storage.Tests
             System.IO.File.Delete(filePath);
         }
 
-        [Test]
+        [TestMethod]
         public void ResumeUploadFileTest()
         {
             Mac mac = new Mac(AccessKey, SecretKey);

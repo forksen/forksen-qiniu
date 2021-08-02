@@ -1,15 +1,15 @@
-﻿using NUnit.Framework;
-using Qiniu.Storage;
+﻿using Qiniu.Storage;
 using System;
 using Qiniu.Util;
 using Qiniu.Tests;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Qiniu.Storage.Tests
 {
-    [TestFixture]
+    [TestClass]
     public class DownloadManagerTests : TestEnv
     {
-        [Test]
+        [TestMethod]
         public void CreatePrivateUrlTest()
         {
             Mac mac = new Mac(AccessKey, SecretKey);
@@ -19,7 +19,7 @@ namespace Qiniu.Storage.Tests
             Console.WriteLine(privateUrl);
         }
 
-        [Test]
+        [TestMethod]
         public void CreatePublishUrlTest()
         {
             string domain = "http://if-pbl.qiniudn.com";

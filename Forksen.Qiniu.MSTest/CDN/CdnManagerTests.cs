@@ -1,17 +1,17 @@
-﻿using NUnit.Framework;
-using Qiniu.Util;
+﻿using Qiniu.Util;
 using Qiniu.Http;
 using Qiniu.Tests;
 using System;
 using System.Diagnostics;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Qiniu.CDN.Tests
 {
-    [TestFixture]
+    [TestClass]
     public class CdnManagerTests : TestEnv
     {
 
-        [Test]
+        [TestMethod]
         public void RefreshUrlsAndDirsTest()
         {
             string[] urls = {
@@ -54,7 +54,7 @@ namespace Qiniu.CDN.Tests
             }
         }
 
-        [Test]
+        [TestMethod]
         public void RefreshUrlsTest()
         {
             string[] urls = {
@@ -83,7 +83,7 @@ namespace Qiniu.CDN.Tests
             }
         }
 
-        [Test]
+        [TestMethod]
         public void RefreshDirsTest()
         {
             string[] dirs = {
@@ -113,7 +113,7 @@ namespace Qiniu.CDN.Tests
         }
 
 
-        [Test]
+        [TestMethod]
         public void PrefetchUrlsTest()
         {
             string[] urls = {
@@ -142,7 +142,7 @@ namespace Qiniu.CDN.Tests
             }
         }
 
-        [Test]
+        [TestMethod]
         public void GetBandwidthDataTest()
         {
             Mac mac = new Mac(AccessKey, SecretKey);
@@ -195,7 +195,7 @@ namespace Qiniu.CDN.Tests
             }
         }
 
-        [Test]
+        [TestMethod]
         public void GetFluxDataTest()
         {
             Mac mac = new Mac(AccessKey, SecretKey);
@@ -248,7 +248,7 @@ namespace Qiniu.CDN.Tests
             }
         }
 
-        [Test]
+        [TestMethod]
         public void GetCdnLogListTest()
         {
             Mac mac = new Mac(AccessKey, SecretKey);
@@ -272,7 +272,7 @@ namespace Qiniu.CDN.Tests
         }
 
 
-        [Test]
+        [TestMethod]
         public void CreateTimestampAntiLeechUrlTest()
         {
             string host = "http://qnls.example.com";

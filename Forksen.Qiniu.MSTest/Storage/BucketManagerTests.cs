@@ -1,15 +1,16 @@
-﻿using NUnit.Framework;
-using Qiniu.Util;
+﻿using Qiniu.Util;
 using Qiniu.Tests;
 using Qiniu.Http;
 using System;
 using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 namespace Qiniu.Storage.Tests
 {
-    [TestFixture]
+    [TestClass]
     public class BucketManagerTests : TestEnv
     {
-        [Test]
+        [TestMethod]
         public void StatTest()
         {
             Config config = new Config();
@@ -29,7 +30,7 @@ namespace Qiniu.Storage.Tests
             Console.WriteLine(statRet.Result.FileType);
         }
 
-        [Test]
+        [TestMethod]
         public void DeleteTest()
         {
             Config config = new Config();
@@ -45,7 +46,7 @@ namespace Qiniu.Storage.Tests
             }
         }
 
-        [Test]
+        [TestMethod]
         public void CopyTest()
         {
             Config config = new Config();
@@ -61,7 +62,7 @@ namespace Qiniu.Storage.Tests
             Console.WriteLine(copyRet.ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void MoveTest()
         {
             Config config = new Config();
@@ -84,7 +85,7 @@ namespace Qiniu.Storage.Tests
             Console.WriteLine(moveRet.ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void ChangeMimeTest()
         {
             Config config = new Config();
@@ -99,7 +100,7 @@ namespace Qiniu.Storage.Tests
             Console.WriteLine(ret.ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void ChangeTypeTest()
         {
             Config config = new Config();
@@ -114,7 +115,7 @@ namespace Qiniu.Storage.Tests
             Console.WriteLine(ret.ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void DeleteAfterDaysTest()
         {
             Config config = new Config();
@@ -136,7 +137,7 @@ namespace Qiniu.Storage.Tests
             Console.WriteLine(expireRet.ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void PrefetchTest()
         {
             Config config = new Config();
@@ -151,7 +152,7 @@ namespace Qiniu.Storage.Tests
             Console.WriteLine(ret.ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void DomainsTest()
         {
             Config config = new Config();
@@ -167,7 +168,7 @@ namespace Qiniu.Storage.Tests
         }
 
 
-        [Test]
+        [TestMethod]
         public void BucketsTest()
         {
             Config config = new Config();
@@ -187,7 +188,7 @@ namespace Qiniu.Storage.Tests
         }
 
 
-        [Test]
+        [TestMethod]
         public void FetchTest()
         {
             Config config = new Config();
@@ -210,7 +211,7 @@ namespace Qiniu.Storage.Tests
             Console.WriteLine(ret.ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void ListFilesTest()
         {
             Config config = new Config();
@@ -229,7 +230,7 @@ namespace Qiniu.Storage.Tests
             Console.WriteLine(listRet.ToString());
         }
 
-        [Test]
+        [TestMethod]
         public void ListBucketTest()
         {
             Config config = new Config();
@@ -255,7 +256,7 @@ namespace Qiniu.Storage.Tests
 
         // batch stat, delete, copy, move, chtype, chgm, deleteAfterDays
         // 批量操作每次不能超过1000个指令
-        [Test]
+        [TestMethod]
         public void BatchStatTest()
         {
             BatchCopyTest();
@@ -296,7 +297,7 @@ namespace Qiniu.Storage.Tests
             }
         }
 
-        [Test]
+        [TestMethod]
         public void BatchDeleteTest()
         {
             BatchCopyTest();
@@ -336,7 +337,7 @@ namespace Qiniu.Storage.Tests
             }
         }
 
-        [Test]
+        [TestMethod]
         public void BatchCopyTest()
         {
             Config config = new Config();
@@ -374,7 +375,7 @@ namespace Qiniu.Storage.Tests
             }
         }
 
-        [Test]
+        [TestMethod]
         public void BatchMoveTest()
         {
             BatchCopyTest();
@@ -414,7 +415,7 @@ namespace Qiniu.Storage.Tests
             }
         }
 
-        [Test]
+        [TestMethod]
         public void BatchChangeMimeTest()
         {
             BatchCopyTest();
@@ -454,7 +455,7 @@ namespace Qiniu.Storage.Tests
             }
         }
 
-        [Test]
+        [TestMethod]
         public void BatchChangeTypeTest()
         {
             BatchCopyTest();
@@ -494,7 +495,7 @@ namespace Qiniu.Storage.Tests
             }
         }
 
-        [Test]
+        [TestMethod]
         public void BatchDeleteAfterDaysTest()
         {
             BatchCopyTest();
